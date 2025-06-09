@@ -1,26 +1,101 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base{
+  .font-sour{
+    font-family: var(--font-sour-gummy);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+
+@layer utilities {
+  .animate-bounce-slow{
+    animation: bounce 4s linear infinite;
+  }
+
+  /* start animation for dot appearing loading */
+  .animate-bounce-first-dot{
+    animation: bounce-dot-1 3s linear infinite;
+  }
+  .animate-bounce-second-dot{
+    animation: bounce-dot-2 3s linear infinite;
+  }
+  .animate-bounce-third-dot{
+    animation: bounce-dot-3 3s linear infinite;
+  }
+
+  .animate-shimmer{
+    animation: shimmer 1.5s infinite;
+  }
+   /* start animation for dot appearing loading */
+
+   /*
+   /*
+   /* sekeleton shimmer effect raw css starts here 
+   */
+   
+
+   .skeleton {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .skeleton::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.6),
+      transparent
+    );
+    transform: translateX(-100%);
+    animation: shimmer 1.5s infinite;
+  }
+
+  /* Skeleton shimmer effect raw css ends here */
+
 }
+
+/* starts keyframes for dot appearing loading */
+
+@keyframes bounce-dot-1 {
+  0%, 95%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+ }
+
+ @keyframes bounce-dot-2 {
+  0%, 33.33%{
+    opacity: 0;
+  }
+  33.34%, 100% {
+    opacity: 1;
+  }
+ }
+
+ @keyframes bounce-dot-3 {
+  0%, 66.66%{
+    opacity: 0;
+  }
+  66.67%, 100% {
+    opacity: 1;
+  }
+ }
+ /* end of keyframes for dot appearing loading */
+
+
+ /* start skeleton shimmer effect keyframe */
+ @keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* end of skeleton shimmer effect keyframe */
+
+ 
