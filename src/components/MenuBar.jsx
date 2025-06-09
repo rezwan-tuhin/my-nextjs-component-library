@@ -364,9 +364,10 @@ export default function Navbar({navBg = 'bg-transparent', textColor = 'text-whit
                       setMobileMenuOpen(false);
                       setDropdownOpen(false);
                     }}
-                    className="block px-4 py-2 text-gray-700 hover:bg-indigo-200 transition"
+                    className="block px-4 py-2 text-gray-700 hover:bg-indigo-200 transition border-b border-gray-200"
                   >
                     <h2 className="text-md text-black mb-1">{item.title}</h2>
+                    <p className="text-sm text-gray-400">{item.description}</p>
                   </Link>
                 ))}
               </div>
