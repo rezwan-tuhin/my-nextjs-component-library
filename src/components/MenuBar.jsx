@@ -315,8 +315,8 @@ export default function Navbar({navBg = 'bg-transparent', textColor = 'text-whit
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-white p-2 rounded-md hover:bg-gray-200/25 transition-all duration-300"
-              aria-label="Toggle menu"
+              className={` ${textColor} p-2 rounded-md hover:bg-gray-200/25 transition-all duration-300"
+              aria-label="Toggle menu`}
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
