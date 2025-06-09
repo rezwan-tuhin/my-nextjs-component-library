@@ -6,10 +6,12 @@ import LoadingDots1 from '@/components/LoadingDots1';
 import LoadingDots2 from '@/components/LoadingDots2';
 import Skeleton2 from '@/components/Skeleton2';
 import Skeleton1 from '@/components/Skeleton1';
+import Navbar from '@/components/MenuBar';
 
 const LoadingAnimation = () => {
   return (
    <div className='min-h-screen w-screen'>
+    <Navbar navBg='bg-white' textColor='text-black' />
      <div className=" p-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
       
       <div className="flex flex-col justify-items-start items-center border py-4 border-gray-200 rounded-md shadow-md hover:scale-105 transition-transform duration-300">

@@ -195,7 +195,7 @@ import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 
-export default function Navbar() {
+export default function Navbar({navBg = 'bg-transparent', textColor = 'text-white'}) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -255,7 +255,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-transparent sticky top-0 z-50">
+    <nav className={`${navBg} sticky top-0 z-50`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center h-16 items-center">
           {/* Desktop menu */}
@@ -264,7 +264,7 @@ export default function Navbar() {
               <Link
                 key={item.title}
                 href={item.href}
-                className="text-white bg-transparent rounded-md hover:bg-gray-200/25 transition-all px-4 py-1.5 duration-300"
+                className={` ${textColor} ${navBg} rounded-md hover:bg-gray-200/25 transition-all px-4 py-1.5 duration-300`}
               >
                 {item.title}
               </Link>
@@ -278,7 +278,7 @@ export default function Navbar() {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className="flex items-center text-white bg-transparent rounded-md hover:bg-gray-200/25 transition-all px-4 py-1.5 duration-300 cursor-pointer"
+                className={`flex items-center ${textColor} ${navBg} rounded-md hover:bg-gray-200/25 transition-all px-4 py-1.5 duration-300 cursor-pointer`}
                 onClick={toggleDropdown}
               >
                 <span>Components</span>
@@ -289,7 +289,7 @@ export default function Navbar() {
 
               {/* Dropdown menu with smooth transitions */}
               <div
-                className={`absolute mt-2 py-4 w-full md:w-[600px] grid grid-cols-1 md:grid-cols-2 bg-white rounded-md shadow-lg overflow-hidden transition-all duration-300 ${
+                className={`absolute mt-2 py-4 w-full md:w-[480px] grid grid-cols-1 md:grid-cols-2 bg-white rounded-md shadow-lg overflow-hidden transition-all duration-300 ${
                   dropdownOpen
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-2 pointer-events-none"
