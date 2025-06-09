@@ -14,9 +14,9 @@ const VideoBackground = ({children}) => {
           {children}
            <div className='flex justify-center items-center'>
            <div className='flex flex-col items-center'>
-           <h2 className='font-sour text-center text-shadow-xs text-shadow-amber-300 text-white text-[clamp(16px,_7vw,_96px)]'>Explore your Journey!</h2> 
+           <h2 className='font-sour text-center text-shadow-xs text-shadow-amber-300 text-white text-[clamp(16px,_7vw,_96px)]'>Continue Your Journey!</h2> 
            <p className='font-sour text-center text-white text-[clamp(11px,_2vw,_32px)] px-4 md:px-0'>This is my practice book of Nextjs components. You also can explore with me</p>
-           <Link href='#' className='mt-4 text-[clamp(16px,_2vw,_24px)] border-2 border-white transition-all duration-600 text-white bg-black px-6 py-1 rounded-full animate-bounce-slow hover:animate-none '>GitHub</Link>
+           <Link href='https://github.com/rezwan-tuhin/my-nextjs-component-library' className='mt-4 text-[clamp(16px,_2vw,_24px)] border-2 border-white transition-all duration-600 text-white bg-black px-6 py-1 rounded-full animate-bounce-slow hover:animate-none '>GitHub</Link>
            </div>
            </div>
         </section>
