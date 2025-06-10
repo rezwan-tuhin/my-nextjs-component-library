@@ -14,7 +14,7 @@ const Home = () => {
                 Continue your Journey!
               </h2>
               <p className="font-sour text-center text-white text-[clamp(11px,_2vw,_32px)] px-4 md:px-0">
-                This is my practice book of Nextjs components. You also can
+                This is my practice book of Nextjs components. You can also
                 explore with me
               </p>
               <Link
