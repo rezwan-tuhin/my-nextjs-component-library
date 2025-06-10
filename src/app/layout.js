@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 const sour_gummy = Sour_Gummy({
-  variable:"--font-sour-gummy",
-  subsets:["latin"]
+  variable: "--font-sour-gummy",
+  subsets: ["latin"],
 });
 export const metadata = {
   title: "Create Next App",
