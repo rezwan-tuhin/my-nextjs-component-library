@@ -18,7 +18,7 @@ const Home = () => {
                 explore with me
               </p>
               <Link
-                href="https://github.com/rezwan-tuhin/my-nextjs-component-library"
+                href="https://github.com/rezwan-tuhin/my-nextjs-component-library" target="_blank"
                 className="mt-4 text-[clamp(16px,_2vw,_24px)] border-2 border-white transition-all duration-600 text-white bg-black px-6 py-1 rounded-full animate-bounce-slow hover:animate-none "
               >
                 GitHub
